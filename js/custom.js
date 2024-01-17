@@ -148,7 +148,7 @@ icon.addEventListener('click' , () => {
 
 var typed3 = new Typed('.type', {
   strings: [
-            'FROET-END  DEVELOPER',
+            'FRONT-END  DEVELOPER',
             'PHOTOGRAPHER',        
 ],
   typeSpeed: 100,
@@ -163,7 +163,7 @@ var typed3 = new Typed('.type', {
 
 const cv = document.getElementById('cv');
 cv.addEventListener('click', () => {
-  window.open('./img/Md_Saiful_Islam (2).pdf');
+  window.open('./img/CV.pdf');
 });
 
 
@@ -229,16 +229,15 @@ document.getElementById('gmail').addEventListener('click', () => {
 
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwnpkrRTqAs14hgUyLr7eLVmIg7SPJ3rcF2SJfqlpdRIjQtoxY3OnSas2VZQw-KfnQ/exec';
-const form = document.forms['contact-form'];
+const form = document.forms['contact-form']
 form.addEventListener('submit' , e => {
+  
   e.preventDefault()
   fetch(scriptURL, { method :'POST' , body : new FormData(form)})
-  .then(response => alert('Thank You! Your form is submitted successfully.' , response))
-  .then(() => {window.location.reload();})
-  .catch(error => alert('Error!' , error.message))
+  .then(response => alert('Thank You! Your form is submitted successfully.'))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
 
-
-
-});
+})
 
 
